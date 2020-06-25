@@ -1,4 +1,7 @@
-# simple-vue-app
+# Links Saver
+
+## View it on Netlify
+ - [Links-Saver](https://links-saver.netlify.app/)
 
 ## Project setup
 ```
@@ -19,6 +22,4 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![Links Saver](./src/assets/links-saver.PNG)
