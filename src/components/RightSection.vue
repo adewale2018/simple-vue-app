@@ -1,10 +1,10 @@
 <template>
-  <div class="section main">
+  <div class="section main" v-show="linksNum > 0">
     <h5>
       <span class="first">Links Counter</span>
       <br />Has a access to the state too
     </h5>
-    <p class="counter">There are {{ linksNum }} links</p>
+    <p class="counter">There are {{ linksNum }} links.</p>
   </div>
 </template>
 
