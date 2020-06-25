@@ -10,10 +10,26 @@
 
 <style>
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: boder-box;
+  font-size: 65.5%;
+}
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,7 +38,7 @@
 }
 
 #nav {
-  padding: 10px;
+  padding: 15px;
 }
 
 #nav a {

@@ -1,7 +1,7 @@
 <template>
   <div class="section">
     <h4 class="teal white-text">Available Links</h4>
-    <ul class="collection left">
+    <ul class="collection left" v-show="linksNum > 0">
       <li class="collection-item left" v-for="link in getLinks" :key="link.id">
         <span id="link">
           <a class="teal-text" :href="link.link" target="_blank">
@@ -9,7 +9,7 @@
           </a>
         </span>
         <button
-          class="btn-small waves-effect waves-light red"
+          class="btn-small waves-effect waves-light"
           type="submit"
           name="action"
           id="btn"
@@ -20,6 +20,7 @@
         </button>
       </li>
     </ul>
+    <p v-show="linksNum === 0">Ooopss.., No available link.</p>
   </div>
 </template>
 
@@ -27,7 +28,7 @@
 import { mapGetters, mapActions } from "vuex";
 export default {
   name: "LinksList",
-  computed: { ...mapGetters(["getLinks"]) },
+  computed: { ...mapGetters(["getLinks", "linksNum"]) },
   methods: {
     ...mapActions(["deleteLink"])
   }
@@ -36,7 +37,13 @@ export default {
 
 <style scoped>
 h4 {
-  margin: 0;
+  padding: 1rem;
+  letter-spacing: 0.18rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+p {
   padding: 1rem;
   letter-spacing: 0.18rem;
   font-weight: 900;
@@ -45,6 +52,12 @@ h4 {
 }
 #btn {
   margin-left: 2rem;
+  font-family: "PT Serif", serif !important;
+  font-weight: 900;
+  letter-spacing: 0.15rem;
+}
+#btn:hover {
+  background: red;
 }
 #link {
   font-size: 1.8rem;
@@ -53,7 +66,7 @@ h4 {
   margin-left: 0;
 }
 #link:hover {
-  background: teal;
+  background: #455a64;
   padding: 1.2rem 0.1rem;
 }
 #link:hover a {

@@ -1,15 +1,16 @@
 <template>
   <div>
-    <h1 class="teal-text">{{ getTitle }}</h1>
+    <h1 class="teal-text">Links Saver</h1>
+    <p>{{ getDescription }}</p>
     <div>
       <div class="row">
-        <div class="col s6">
-          <links-list />
-        </div>
-        <div class="col s6">
+        <div class="col l6 m6 s12">
           <new-link-form />
           <right-section />
           <clear-all />
+        </div>
+        <div class="col l6 m6 s12">
+          <links-list />
         </div>
       </div>
     </div>
@@ -28,7 +29,7 @@ export default {
   name: "Landing",
   components: { NewLinkForm, LinksList, RightSection, ClearAll },
   computed: {
-    ...mapGetters(["getTitle"])
+    ...mapGetters(["getDescription"])
   }
 };
 </script>
@@ -36,9 +37,16 @@ export default {
 <style scoped>
 h1 {
   margin-top: 1rem;
+  margin-bottom: 0;
   letter-spacing: 0.15rem;
   font-weight: 900;
   text-transform: uppercase;
   font-size: 2rem;
+}
+p {
+  color: teal;
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 </style>

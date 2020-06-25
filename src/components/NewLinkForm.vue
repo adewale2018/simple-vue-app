@@ -12,7 +12,7 @@
               v-model="newLink"
               required
             />
-            <label for="newLink">Add More Link...</label>
+            <label for="newLink">Enter A Valid Link...</label>
           </div>
         </div>
         <button
@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 .add-new {
-  border: 2px dashed teal;
+  border: 1px dashed teal;
   text-align: center;
   padding-left: 2rem;
   margin-top: 3rem;
@@ -67,5 +67,10 @@ h5 {
 }
 .before-btn {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 425px) {
+  .add-new {
+    order: 1;
+  }
 }
 </style>

@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    title: "Keep important links with this app",
+    description: "Keep important links with this app.",
     links: [
       { id: uuidv4(), link: "https://www.google.com" },
       { id: uuidv4(), link: "https://www.amazon.com" },
@@ -15,8 +15,8 @@ export default new Vuex.Store({
     ]
   },
   getters: {
-    getTitle(state) {
-      return state.title;
+    getDescription(state) {
+      return state.description;
     },
     getLinks(state) {
       return state.links;
@@ -31,6 +31,9 @@ export default new Vuex.Store({
     },
     addNewLink({ commit }, link) {
       commit("ADD_NEW_LINK", link);
+    },
+    clearLinks({ commit }) {
+      commit("REMOVE_ALL");
     }
   },
   mutations: {
@@ -43,6 +46,9 @@ export default new Vuex.Store({
         link: link
       };
       return (state.links = [newLink, ...state.links]);
+    },
+    REMOVE_ALL(state) {
+      return (state.links = []);
     }
   },
   modules: {}
