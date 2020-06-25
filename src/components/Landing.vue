@@ -1,17 +1,12 @@
 <template>
   <div>
     <h1 class="teal-text">{{ getTitle }}</h1>
-    <!-- Navbar goes here -->
-    <div class="container">
-      <!-- Page Layout here -->
+    <div>
       <div class="row">
-        <div class="col s3 left">
-          <!-- Grey navigation panel -->
+        <div class="col s6">
           <links-list />
         </div>
-
-        <div class="col s9">
-          <!-- Teal page content  -->
+        <div class="col s6">
           <new-link-form />
           <right-section />
           <clear-all />
