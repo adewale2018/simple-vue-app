@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    title: "A simple app with vue and vuex",
+    title: "Keep important links with this app",
     links: [
       { id: uuidv4(), link: "https://www.google.com" },
       { id: uuidv4(), link: "https://www.amazon.com" },
@@ -20,6 +20,9 @@ export default new Vuex.Store({
     },
     getLinks(state) {
       return state.links;
+    },
+    linksNum(state) {
+      return state.links.length;
     }
   },
   actions: {
