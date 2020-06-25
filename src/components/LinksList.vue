@@ -46,12 +46,16 @@ h4 {
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
   font-family: "PT Serif", serif;
-  padding: 0.5rem 1.3rem;
+  margin-left: 0;
 }
 #link:hover {
   background: teal;
+  padding: 1.2rem 0.1rem;
 }
 #link:hover a {
   color: #fff !important;
+}
+.collection-item {
+  overflow: hidden !important;
 }
 </style>

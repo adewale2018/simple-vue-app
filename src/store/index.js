@@ -25,11 +25,21 @@ export default new Vuex.Store({
   actions: {
     deleteLink({ commit }, link) {
       commit("REMOVE_LINK", link);
+    },
+    addNewLink({ commit }, link) {
+      commit("ADD_NEW_LINK", link);
     }
   },
   mutations: {
     REMOVE_LINK(state, link) {
       return (state.links = state.links.filter(lnk => lnk.id !== link.id));
+    },
+    ADD_NEW_LINK(state, link) {
+      const newLink = {
+        id: uuidv4(),
+        link: link
+      };
+      return (state.links = [newLink, ...state.links]);
     }
   },
   modules: {}
