@@ -17,9 +17,20 @@ export default new Vuex.Store({
   getters: {
     getTitle(state) {
       return state.title;
+    },
+    getLinks(state) {
+      return state.links;
     }
   },
-  mutations: {},
-  actions: {},
+  actions: {
+    deleteLink({ commit }, link) {
+      commit("REMOVE_LINK", link);
+    }
+  },
+  mutations: {
+    REMOVE_LINK(state, link) {
+      return (state.links = state.links.filter(lnk => lnk.id !== link.id));
+    }
+  },
   modules: {}
 });
