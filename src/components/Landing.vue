@@ -35,6 +35,10 @@ export default {
 
 <style scoped>
 h1 {
-  margin: 0;
+  margin-top: 1rem;
+  letter-spacing: 0.15rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 </style>

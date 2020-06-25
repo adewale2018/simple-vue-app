@@ -1,8 +1,8 @@
 <template>
   <div class="section">
-    <h4>These are the available Links</h4>
-    <ul class="collection">
-      <li class="collection-item" v-for="link in getLinks" :key="link.id">
+    <h4 class="teal white-text">Available Links</h4>
+    <ul class="collection left">
+      <li class="collection-item left" v-for="link in getLinks" :key="link.id">
         <span id="link">
           <a class="teal-text" :href="link.link" target="_blank">
             {{ link.link }}
@@ -36,8 +36,12 @@ export default {
 
 <style scoped>
 h4 {
-  letter-spacing: 0.1rem;
-  /* font-weight: 100; */
+  margin: 0;
+  padding: 1rem;
+  letter-spacing: 0.18rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 #btn {
   margin-left: 2rem;

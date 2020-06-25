@@ -1,11 +1,17 @@
 <template>
   <div class="section add-new">
-    <h4 class="teal-text">Add New Link</h4>
+    <h5 class="teal-text">Add New Link</h5>
     <div class="row">
       <form class="col s12 center" @submit.prevent="onSubmit()">
         <div class="row center before-btn">
           <div class="input-field col s6 center">
-            <input id="newLink" type="text" class="validate" v-model="newLink" required />
+            <input
+              id="newLink"
+              type="text"
+              class="validate"
+              v-model="newLink"
+              required
+            />
             <label for="newLink">Add More Link...</label>
           </div>
         </div>
@@ -50,10 +56,14 @@ export default {
   border: 2px dashed teal;
   text-align: center;
   padding-left: 2rem;
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
-h4 {
+h5 {
   margin: 0;
+  letter-spacing: 0.15rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 .before-btn {
   margin-bottom: 0;
